@@ -17,6 +17,7 @@ char name;
       exit(0);
     }
     else  {
+	printf("You did a good job! \n");
       printf("Parent process => PID=%d\n", getpid());
       printf("Waiting for child processes to finish...\n");
       wait(NULL);
