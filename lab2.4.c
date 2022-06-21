@@ -10,14 +10,15 @@ char name;
     pid_t pid = fork();
 
     if(pid == 0) {
-	printf("Enter your name: \n");
-	scanf("%c", &name);
-	printf("Your name is %c \n", name);
+	  printf("You did a good job! \n");
       printf("Child process => PPID=%d, PID=%d\n", getppid(), getpid());
       exit(0);
     }
     else  {
-	printf("You did a good job! \n");
+	  printf("Enter your name: \n");
+	  scanf("%c", &name);
+	  printf("Your name is %c \n", name);
+	  
       printf("Parent process => PID=%d\n", getpid());
       printf("Waiting for child processes to finish...\n");
       wait(NULL);
